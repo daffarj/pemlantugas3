@@ -6,15 +6,17 @@ public class Buku{
     private int tahunTerbit;
     private static int jumlahbuku = 0;
 
+    // membuat constructor class Buku dengan parameter
     public Buku(String judulBuku, String penulis, int tahunTerbit){
         this.judulBuku = judulBuku;
         this.penulis = penulis;
         this.tahunTerbit = tahunTerbit;
         jumlahbuku++;
     }
-
+    // constructor class Buku tanpa parameter (overloading) 
     public Buku(){}
 
+    // getter method
     public String getJudulBuku(){
         return judulBuku;
     }
@@ -31,21 +33,28 @@ public class Buku{
         return jumlahbuku;
     }
 
+    // menambahkan data buku baru
     public String displaybuku(Buku buku){
         String datanya = "-" + buku.getJudulBuku() + "oleh" + buku.getPenulis() + "(" + buku.getTahunTerbit() + ")" ;
         return datanya;
     }
+
+    // method untuk menampilkan data buku
     public static void displaybuku(){
         try{
             BufferedReader reader = new BufferedReader(new FileReader("./databuku.txt"));
             String line;
             System.out.println("====Daftar Buku Singkat====");
             while ((line = reader.readLine()) != null) {
+                // dipisahkan berdasarkan kata oleh
                 int end = line.indexOf("oleh");
+                // apabila ditemukan
                 if (end > 0) {
+                    // mengambil hanya judulnya saja
                     String judulbuku = line.substring(0, end);
                     System.out.println("-" + judulbuku);
                 } else {
+                    // jika format tidak sesuai maka cetak keseluruhan
                     System.out.println(" - " + line);
                 }
                 
