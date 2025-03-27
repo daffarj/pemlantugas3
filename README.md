@@ -171,4 +171,8 @@ default digunakan ketika user menginputkan data yang salah atau tidak sesuai, ke
         } while (i != 3);
 ```
 ## 3. Gambar ketika code berjalan
+Menu menambahkan buku
+![gambar1](https://github.com/daffarj/pemlantugas3/blob/main/public/Screenshot%202025-03-27%20233106.png?raw=true)
+Menu untuk menampilkan data buku dari file .txt secara lengkap dan singkat (judul saja)
+![gambar2](https://github.com/daffarj/pemlantugas3/blob/main/public/Screenshot%202025-03-27%20233131.png?raw=true)
 
